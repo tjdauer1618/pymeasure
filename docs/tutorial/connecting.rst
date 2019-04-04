@@ -40,7 +40,7 @@ PyMeasure supports a number of adapters, which are responsible for communicating
     from pymeasure.adapters import VISAAdapter
 
     adapter = VISAAdapter("GPIB::4")
-    sourcemeter = Keithely2400(adapter)
+    sourcemeter = Keithley2400(adapter)
 
 To instead use a Prologix GPIB device connected on :code:`/dev/ttyUSB0` (proper permissions are needed in Linux, see :class:`PrologixAdapter <pymeasure.adapters.PrologixAdapter>`), the adapter is constructed in a similar way. Unlike the VISA adapter which is specific to each instrument, the Prologix adapter can be shared by many instruments. Therefore, they are addressed separately based on the GPIB address number when passing the adapter into the instrument construction. ::
 
